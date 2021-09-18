@@ -1,0 +1,72 @@
+.footer {
+  margin-top: 9rem;
+  padding-bottom: 4rem;
+  min-height: 28vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--color-font-gray-3);
+  width: 100%;
+  &__wrapper {
+    width: 60%;
+    margin: auto;
+  }
+  &-top {
+    a {
+      color: var(--color-font-gray-3);
+    }
+    padding-top: 2rem;
+    font-size: 1.65rem;
+  }
+  &-links {
+    padding-top: 1.5rem;
+    list-style: none;
+    li {
+      display: inline-block;
+      font-size: 1.35rem;
+      width: 25%;
+      //&:not(:first-child) {
+      margin: 1rem 0 0 0;
+      //}
+
+      a {
+        color: var(--color-font-gray-3);
+      }
+    }
+  }
+}
+.footer-lang-select {
+  margin-top: 4rem;
+  //padding: .3rem;
+  width: 15%;
+  background-color: black;
+  position: relative;
+  color: var(--color-font-gray-3);
+  border: 1px solid var(--color-font-gray-3);
+  border-radius: 3px;
+  overflow: hidden;
+
+  select {
+    width: 100%;
+    background-color: black;
+    border: 1px solid transparent;
+    padding: 1.5rem 1rem;
+    text-align: right;
+    background-image: none;
+    color: var(--color-font-gray-3);
+    option {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: url("/assets/images/sphere.svg");
+    display: inline-block;
+    color: var(--color-font-gray-3);
+    fill: var(--color-font-gray-3);
+    //background-color: var(--color-font-gray-3);
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    //width: 4rem;
+    //height: 4rem;
+  }
+}

@@ -1,0 +1,19 @@
+.signin-header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  &__logo{
+    margin-left:3%;
+    text-decoration: none;
+    vertical-align: middle;
+    fill: #e50914;
+    display: inline-block;
+    line-height: 92px;
+  }
+}
+.nfLogo{
+  fill: #e50914;
+  height: 4.5rem;
+  width: 16.7rem;
+  vertical-align: middle;
+}
