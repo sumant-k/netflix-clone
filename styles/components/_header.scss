@@ -2,6 +2,9 @@
   position: fixed;
   top: 0;
   width: 100%;
+  @include respond(phone-xl) {
+    background-color: rgba(0, 0, 0, 100);
+  }
   &__logo{
     margin-left:3%;
     text-decoration: none;
@@ -9,11 +12,18 @@
     fill: #e50914;
     display: inline-block;
     line-height: 92px;
+    @include respond(phone-sm) {
+      line-height: 70px;
+    }
   }
 }
 .nfLogo{
   fill: #e50914;
-  height: 4.5rem;
   width: 16.7rem;
+  height: 4.5rem;
+  @include respond(phone-sm) {
+    width: 10rem;
+    height: 5rem;
+  }
   vertical-align: middle;
 }
