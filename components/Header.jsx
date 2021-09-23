@@ -1,7 +1,8 @@
+import Link from "next/link"
 export default function Header(props) {
   return (
     <header className="signin-header">
-      <a href="/" className={"signin-header__logo"}>
+      <Link href="/" passHref className={"signin-header__logo"}>
         <svg viewBox="0 0 111 30" className="nfLogo" focusable="true">
           <g id="netflix-logo">
             <path
@@ -10,7 +11,7 @@ export default function Header(props) {
             />
           </g>
         </svg>
-      </a>
+      </Link>
     </header>
   );
 }

@@ -1,0 +1,398 @@
+.home-page-wrapper {
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/assets/images/bg.jpg");
+  @include respond(phone-xl) {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 100),
+      rgba(0, 0, 0, 100)
+    );
+  }
+  background-size: cover;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  @include respond(tab-port) {
+    max-width: 90%;
+  }
+  margin: auto;
+  &__title {
+    padding: 0 5rem 1.25rem 5rem;
+    @include respond(phone-md) {
+      padding: 0;
+    }
+  }
+
+  &__msg {
+    color: var(--color-soft-white);
+    margin: 2rem 0;
+  }
+  &__signup-form {
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__email {
+      outline: none;
+      margin: 0;
+      height: 6rem;
+      border-radius: 0;
+      border: 1px solid transparent;
+      width: 70%;
+      @include respond(phone-reg) {
+        width: 90%;
+      }
+      font-size: 1.8rem;
+      padding: 2rem 1rem 0.8rem 1rem;
+      transition: 0.3s all;
+
+      &-label {
+        position: absolute;
+        color: var(--color-font-gray-1);
+        font-size: 1.6rem;
+        left: 1rem;
+        top: 28%;
+        @include respond(tab-port) {
+          left: 18%;
+          top: 12%;
+        }
+        @include respond(phone-reg) {
+          left: 10%;
+          top: 12%;
+        }
+        font-weight: 100;
+        transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease,
+          -webkit-transform 0.1s ease, -moz-transform 0.1s ease,
+          -o-transform 0.1s ease;
+      }
+
+      &:valid + &-label {
+        font-size: 1.2rem;
+        font-weight: 600;
+        top: 0.5rem;
+      }
+      &:focus + &-label {
+        font-weight: 600;
+        font-size: 1.2rem;
+        top: 0.5rem;
+      }
+    }
+    &__btn {
+      width: 30%;
+      padding: 0;
+      @include respond(tab-port) {
+        margin-top: 2rem;
+      }
+      @include respond(phone-md) {
+        width: 25rem;
+      }
+      // @include respond(phone-sm) {
+      //   width: 80%;
+      // }
+      height: 6rem;
+      border-radius: 0;
+      border: 1px solid transparent;
+      background-color: var(--color-bg-secondary);
+      color: var(--color-soft-white);
+      font-size: 2.3rem;
+      position: relative;
+      &::after {
+        content: "\232A";
+        font-size: 2.3rem;
+        position: absolute;
+        right: 10%;
+        top: 25%;
+        bottom: 50%;
+      }
+    }
+  }
+}
+.title-primary {
+  font-size: 5rem;
+  line-height: 1.25 !important;
+  margin-bottom: 1.25rem;
+  display: block;
+  width: 100%;
+
+  @include respond(phone-reg) {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  @include respond(phone-sm) {
+    font-size: 3rem;
+  }
+}
+.title-secondary {
+  font-size: 2.6rem;
+  font-weight: 100;
+  margin-bottom: 1.25rem;
+  line-height: 1.25 !important;
+  @include respond(phone-reg) {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  // @include respond(phone-sm) {
+  //   font-size: 2.75rem;
+  // }
+}
+.title-tertiary {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 1.25rem;
+  line-height: 1.25 !important;
+  @include respond(phone-reg) {
+    font-size: 1.95rem;
+    margin-bottom: 1rem;
+  }
+}
+.title-h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  line-height: 1.25 !important;
+}
+.title-h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  line-height: 1.25 !important;
+}
+.story {
+  background-color: black;
+  color: var(--color-soft-white);
+}
+.story-card {
+  display: flex;
+  flex-direction: row;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+  &--reverse {
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+    }
+  }
+  align-items: center;
+  margin: auto;
+  border-top: 8px solid var(--color-font-gray-darkest);
+  width: 100%;
+  max-width: 100%;
+  padding: 5rem 10rem;
+
+  @include respond(phone-xl) {
+    padding: 5rem;
+  }
+  @include respond(phone-md) {
+    padding: 3rem;
+  }
+  @include respond(phone-sm) {
+    padding: 2rem;
+  }
+  &__1-message {
+    width: 55%;
+    padding: 0 6rem 2rem 2rem;
+    @include respond(tab-port) {
+      text-align: center;
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+  &__img-wrapper {
+    text-align: center;
+    width: 45%;
+    @include respond(tab-port) {
+      width: 70%;
+    }
+    @include respond(phone-xl) {
+      width: 80%;
+    }
+    @include respond(phone-md) {
+      width: 90%;
+    }
+    @include respond(phone-sm) {
+      width: 100%;
+    }
+    position: relative;
+    // background-color: aqua;
+    &__tv {
+      // background-color: transparent;
+      position: relative;
+      z-index: 2;
+    }
+    &__video-1 {
+      position: absolute;
+      z-index: 1;
+      top: 20.5%;
+      left: 13%;
+      width: 73%;
+    }
+    &__video-2 {
+      position: absolute;
+      //   border: 1px solid white;
+      z-index: 1;
+      top: 10%;
+      left: 19%;
+      width: 61%;
+    }
+  }
+  &__2-message {
+    width: 55%;
+    padding: 0 2rem 3rem 8rem;
+    @include respond(tab-port) {
+      text-align: center;
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+}
+.downloading-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  background-color: black;
+  border: 3px solid var(--color-font-gray-darkest);
+  width: 60%;
+  margin: auto;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 8%;
+  left: 20%;
+  z-index: 1000;
+  &__img {
+    height: 7.2rem;
+  }
+  &__status {
+    h4 {
+      margin-bottom: 0;
+    }
+    span {
+      font-size: 1.4rem;
+      color: var(--color-font-blue-1);
+    }
+    margin-left: 1rem;
+    text-align: left;
+    position: relative;
+  }
+  &__loader {
+    display: block;
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    background-color: transparent;
+    height: 6rem;
+    width: 4.8rem;
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif)
+      center center no-repeat;
+    background-size: 100%;
+  }
+}
+
+.FAQ {
+  background-color: black;
+  margin: auto;
+  border-top: 8px solid var(--color-font-gray-darkest);
+  border-bottom: 8px solid var(--color-font-gray-darkest);
+  width: 100%;
+  max-width: 100%;
+  padding: 5rem 10rem;
+  @include respond(phone-md) {
+    padding: 5rem 0;
+  }
+  color: var(--color-soft-white);
+}
+.accordion-wrapper {
+  width: 70%;
+  @include respond(phone-xl) {
+    width: 90%;
+  }
+  @include respond(phone-md) {
+    width: 100%;
+  }
+  margin: 4rem auto;
+}
+.accordion-list {
+  list-style: none;
+  li {
+    padding: 0;
+    margin: 1rem auto;
+  }
+}
+.accordion {
+  &__trigger {
+    padding: 2rem 3rem;
+    background-color: var(--color-font-gray-4);
+    margin-bottom: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    &__placeholder {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      &:checked + .accordion__trigger__indicator::after {
+        content: "\2715";
+      }
+    }
+    &__indicator::after {
+      content: "\271A";
+      position: absolute;
+      right: 5%;
+    }
+  }
+  &__content {
+    margin-top: 1px;
+    font-size: 2.6rem;
+    padding: 4rem;
+    background-color: var(--color-font-gray-4);
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    // transition: height 0.1s ease, top 0.1s ease, opacity 0.1s ease,
+    //   top 0.1s ease, visibility 0.1s ease, top 0.1s ease;
+  }
+  &__content-show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: 1s all;
+  }
+}
+.form-2 {
+  margin: 6rem auto;
+  width: 65%;
+  @include respond(phone-md) {
+    width: 90%;
+  }
+  @include respond(phone-reg) {
+    width: 100%;
+  }
+  @include respond(tab-port) {
+    margin: 3rem auto;
+    width: 80%;
+  }
+}

@@ -1,27 +1,45 @@
-
-:root{
-  --color-bg-primary:rgba(0, 0, 0, 0.75);
-  --color-bg-secondary:#e50914;;
-  --color-font-secondary:#e87c03;
-  --color-font-blue-1:rgb(0, 113, 235);
-  --color-font-gray-1:#8c8c8c;
-  --color-font-gray-2:#b3b3b3;
-  --color-font-gray-3:#757575;
-
+:root {
+  --color-soft-white: #fff;
+  --color-bg-primary: rgba(0, 0, 0, 0.75);
+  --color-bg-secondary: #e50914;
+  --color-font-secondary: #e87c03;
+  --color-font-blue-1: rgb(0, 113, 235);
+  --color-font-gray-1: #8c8c8c;
+  --color-font-gray-2: #b3b3b3;
+  --color-font-gray-3: #757575;
+  --color-font-gray-4: #303030;
+  --color-font-gray-darkest: #222;
 }
 
-.text-gray-2{
+.text-gray-2 {
   color: var(--color-font-gray-2);
 }
-.text-white{
+.text-white {
   color: white;
 }
-.display-inline-block{
+.display-inline-block {
   display: inline-block;
 }
-.color-dark-blue-1{
+.color-dark-blue-1 {
   color: var(--color-font-blue-1);
 }
-.mt-md{
+.mt-md {
   margin-top: 4rem !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.padding-sm {
+  padding: 2rem;
+}
+.padding-md {
+  padding: 3.25rem;
+}
+.padding-xl {
+  padding: 5rem;
+}
+.img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
 }

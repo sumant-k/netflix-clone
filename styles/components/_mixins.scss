@@ -33,6 +33,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @if $breakpoint == phone-sm {
     @media only screen and (max-width: 22.5em) { @content };    //360px
   }
+  @if $breakpoint == phone-reg {
+    @media only screen and (max-width: 25em) { @content };    //400px
+  }
   @if $breakpoint == phone-md {
     @media only screen and (max-width: 37.5em) { @content };    //600px
   }

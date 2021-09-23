@@ -1,8 +1,14 @@
 .footer {
-  margin-top: 9rem;
   padding-bottom: 4rem;
   min-height: 28vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  &--light {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 9rem;
+  }
+  &--dark {
+    background-color: black;
+  }
+
   color: var(--color-font-gray-3);
   width: 100%;
   &__wrapper {
@@ -50,8 +56,10 @@
     border: 1px solid transparent;
     padding: 1.5rem 1rem;
     text-align: right;
+    text-align-last: right;
     background-image: none;
     color: var(--color-font-gray-3);
+    outline: none;
     option {
       width: 100%;
     }
