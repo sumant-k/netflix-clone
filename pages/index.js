@@ -11,8 +11,8 @@ export default function Home() {
   }
   return (
     <>
-      <Header />
       <main className="home-page-wrapper">
+        <Header />
         <NavSpaceHolder />
         <div className="home">
           <h1 className="title-primary text-center home__title">
