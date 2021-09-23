@@ -1,0 +1,28 @@
+.language-selector {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  select {
+    background-color: black;
+    outline: none;
+    border: 1px solid var(--color-font-gray-2);
+    color: var(--color-soft-white);
+    padding: 1rem 1rem 1.1rem 3rem;
+    text-align: right !important;
+    border-radius: 4px;
+    text-align-last: right !important;
+    position: relative;
+    @include respond(phone-md) {
+      padding: 0.8rem 0.8rem 0.9rem 3rem;
+    }
+  }
+  &::after {
+    content: url("/assets/images/sphere-white.svg");
+    color: var(--color-soft-white);
+    fill: var(--color-soft-white);
+    //background-color: var(--color-font-gray-3);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+}
